@@ -1,6 +1,3 @@
-#!/usr/bin/python
-# -*-coding:utf-8 -*
-
 """
 How many of each movie rating exist
 """
