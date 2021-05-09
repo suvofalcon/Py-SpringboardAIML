@@ -1,4 +1,4 @@
-# Py-SpringboardML
+# Py-SpringboardDS
 This will have code demonstration for all aspects of machine learning, deep learning, computer vision, automation, feature engineering implementations using Python
 
 ## Crash Course
