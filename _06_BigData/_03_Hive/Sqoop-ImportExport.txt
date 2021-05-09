@@ -1,0 +1,24 @@
+# This is on the mysql database.
+# This will ensure the account used in sqoop has all PRIVILEGES
+
+mysql> CREATE USER 'scimport'@'localhost' IDENTIFIED BY 'hadoop';
+mysql> GRANT ALL PRIVILEGES ON movielens.* to 'scimport'@'localhost';
+
+# Now back to HDP instance, 
+
+# Import - From MYSQL to hadoop
+sqoop import --connect jdbc:mysql://localhost/movielens 
+--driver com.mysql.jdbc.Driver 
+--table movies -m1 --username scimport --password hadoop
+
+# Import - From MYSQL to Hive directly
+sqoop import --connect jdbc:mysql://localhost/movielens --driver com.mysql.jdbc.Driver --table movies -m1 --hive-import --username scimport --password hadoop
+
+# Export - Hadoop to mysql
+
+sqoop export --connect jdbc:mysql://localhost/movielens 
+--driver com.mysql.jdbc.Driver 
+--table exported_movies 
+--export-dir /apps/hive/warehouse/movies --input-fields-terminated-by '\0001' -m1 --username scimport -P
+
+
