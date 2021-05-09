@@ -1,0 +1,3 @@
+Microsoft#340216.8#USA*United Kingdom*India*Germany*Canada#CEO$Satya Nadella*CFO$Peter Klien#Microsoft Redmond Campus*Redmond*Washington*98052
+Oracle#33095.3#USA*United Kingdom*India*Germany*Canada*Singapore#CEO$Larry Ellision#Oracle San Jose*San Jose*California*56552
+Apple#4478.8#USA*United Kingdom*Singapore*Australia*China*India#CEO$Tim Cook#Apple Campus*Cupertino*California*67803
