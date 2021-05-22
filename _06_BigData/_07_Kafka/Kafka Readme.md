@@ -67,5 +67,7 @@ If Brokers should be publicly accessible, we need to adjust "advertised.listener
 
 ![Kafka Topic](resources/Kafka-11.png)
 
+Messages are stored by Kafka Brokers by topic. Every topic must have a unique name. Every topic must have a unique name in a kafka cluster.
 
+Every message inside a topic must have a unique number called offset.
 
