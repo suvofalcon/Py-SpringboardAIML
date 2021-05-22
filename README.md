@@ -81,6 +81,13 @@ Various recommendation algorithms
 
 Various implementations within Big Data technologies
 
+### Map-Reduce Implementation Using Python
+### Apache Pig Scripts
+### Apache Hive Queries
+### Apache HBase
+### Apache Flume
+### Apache Kafka
+
 ## Deeep Learning 
 
 This has various implementations of neural networks
