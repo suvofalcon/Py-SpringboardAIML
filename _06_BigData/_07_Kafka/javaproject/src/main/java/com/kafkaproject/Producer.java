@@ -33,7 +33,7 @@ public class Producer {
 
         //EXAMPLE -1 (Numbers as Strings for key and value without any delay)
         for (int i = 0; i < numOfRecords; i++) {
-            System.out.println("Message "+ i +" was just sent");
+            System.out.println("Message "+ i +" was just sent at "+ new Date());
             producer.send(new ProducerRecord<String,String>(topic, Integer.toString(i), Integer.toString(i)));
         }
         producer.close();
