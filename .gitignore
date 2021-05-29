@@ -3,3 +3,6 @@
 
 # Ignore vscode project files
 .vscode/
+
+# Ignore .class file as well
+.class
