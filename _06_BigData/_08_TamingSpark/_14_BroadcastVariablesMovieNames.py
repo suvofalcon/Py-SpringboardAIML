@@ -31,7 +31,7 @@ def lookUpMovieName(movieID):
 '''
 We will now use broadcast method. 
 This broadcast objects to the executors, such that they are always there when needed
-Very beneficial for large data
+Very beneficial for smaller dataset
 '''
 nameDict = spark.sparkContext.broadcast(loadMovieNames())
 
@@ -48,6 +48,7 @@ movieData = spark.read.option("sep", "\t").schema(schema=schema).csv("../resourc
 movieCounts = movieData.groupBy("MovieID").count()
 
 # We will initialize a user defined function
+# Convert out user defined function lookUpMovieName to a spark UDF , which can be used in SparkSQL and in Spark Dataframes
 lookUpNameUDF = func.udf(lookUpMovieName)
 
 # We will now add a new column in our dataframe using this udf
