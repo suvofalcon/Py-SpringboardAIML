@@ -29,47 +29,39 @@ An accumlator allows many executors to increment a shared variable
 # Import the Spark Libraries
 from pyspark import SparkConf, SparkContext
 
-# Initialize Spark Config and set application name
+# Initialize the spark config and set application name
 conf = SparkConf().setMaster("local").setAppName("DegreesOfSeparation")
-sc = SparkContext(conf=conf)
+sc = SparkContext(conf = conf)
 
-# The characters we wished to find the degree of separation between:
-startCharacterID = 5306 # Spiderman
-targetCharacterID = 14 # ADAM
+# The characters we wish to find the degree of separation between:
+startCharacterID = 5306 #SpiderMan
+targetCharacterID = 14  #ADAM 3,031 (who?)
 
-# Define a accumulator, used to signal when we find the target Character uding our BFS traversal
-# Sets up a shared accumulator with initial value 0
+# Our accumulator, used to signal when we find the target character during
+# our BFS traversal.
 hitCounter = sc.accumulator(0)
 
-'''
-Convert to BFS structure
-'''
 def convertToBFS(line):
     fields = line.split()
-    heroID = fields[0]
+    heroID = int(fields[0])
     connections = []
-    for items in fields[1:]:
-        connections.append(int(items))
-    
-    color = "WHITE"
+    for connection in fields[1:]:
+        connections.append(int(connection))
+
+    color = 'WHITE'
     distance = 9999
 
     if (heroID == startCharacterID):
-        color = "GRAY"
+        color = 'GRAY'
         distance = 0
-    
-    return (heroID,(connections, distance, color))
 
-'''
-Read the data file and call the mapper function
-'''
-def createStartingRDD():
+    return (heroID, (connections, distance, color))
+
+
+def createStartingRdd():
     inputFile = sc.textFile("../resources/Marvel-Graph")
-    return (inputFile.map(convertToBFS))
+    return inputFile.map(convertToBFS)
 
-'''
-BFS Mapper
-'''
 def bfsMap(node):
     characterID = node[0]
     data = node[1]
@@ -79,28 +71,25 @@ def bfsMap(node):
 
     results = []
 
-    # If this node needs to be expanded...
+    #If this node needs to be expanded...
     if (color == 'GRAY'):
         for connection in connections:
             newCharacterID = connection
             newDistance = distance + 1
-            newColor = "GRAY"
+            newColor = 'GRAY'
             if (targetCharacterID == connection):
                 hitCounter.add(1)
-            
+
             newEntry = (newCharacterID, ([], newDistance, newColor))
             results.append(newEntry)
-        
-        # We have processed this node, hence color it Black
-        color = "BLACK"
-    
-    # Emit the input node, so we dont lose it
-    results.append((characterID, (connections, distance, color)))
+
+        #We've processed this node, so color it black
+        color = 'BLACK'
+
+    #Emit the input node so we don't lose it.
+    results.append( (characterID, (connections, distance, color)) )
     return results
 
-'''
-BFS Reducer
-'''
 def bfsReduce(data1, data2):
     edges1 = data1[0]
     edges2 = data2[0]
@@ -143,12 +132,9 @@ def bfsReduce(data1, data2):
     return (edges, distance, color)
 
 
-'''
-Main Program Begins here
-'''
-# One of the sample element of iterationRDD is 
-# ('5632', ([2912, 4366, 2040, 1602, 4395, 133, 403, 2178, 6306], 9999, 'WHITE'))
-iterationRdd = createStartingRDD()
+#Main program here:
+iterationRdd = createStartingRdd()
+
 for iteration in range(0, 10):
     print("Running BFS iteration# " + str(iteration+1))
 
@@ -169,6 +155,3 @@ for iteration in range(0, 10):
     # Reducer combines data for each character ID, preserving the darkest
     # color and shortest path.
     iterationRdd = mapped.reduceByKey(bfsReduce)
-
-
-
