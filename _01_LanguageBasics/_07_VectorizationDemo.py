@@ -9,6 +9,11 @@ import time
 a = np.random.rand(1000000)
 b = np.random.rand(1000000)
 
+print("Array - a")
+print(a)
+print("Array - b")
+print(b)
+
 # Performing vector product
 tic = time.time()
 vecProduct = np.dot(a, b)
