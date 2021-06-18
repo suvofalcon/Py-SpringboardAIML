@@ -7,3 +7,8 @@
 # Ignore .class file as well
 _06_BigData/_07_Kafka/javaproject/target/classes/com/kafkaproject/*.class
 _06_BigData/_07_Kafka/javaproject/target/classes/com/kafkaproject/Producer.class
+
+# Ignore .h5 files
+_10_TensorFlow2.0/*.h5
+_10_TensorFlow2.0/*.json
+
