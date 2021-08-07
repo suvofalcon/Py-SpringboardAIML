@@ -26,7 +26,7 @@ class TotalUnitsSold(MRJob):
 
     # Reducer function
     def reducer_sum_unitsSold(self, key, values):
-        yield key, sum(values)
+        yield str(sum(values)).zfill(5), key 
 
 if __name__ == '__main__':
     TotalUnitsSold.run()
