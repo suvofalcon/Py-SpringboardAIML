@@ -1,6 +1,11 @@
-## How to run the MRjob
+## How to run the MRjob on hadoop
 
 python _01_RatingsBreakdown.py -r hadoop hdfs:///datasets/ml-100k/u.data --python-bin /home/suvo/opt/miniconda3/envs/pyspark/bin/python
+
+## How to run the MRjob locally
+
+python _01_GeoSales_TotalUnitsSold.py ../resources/geosales.csv --python-bin /home/suvo/opt/miniconda3/envs/pyspark/bin/python
+
 
 
 ### Trick

@@ -1,5 +1,5 @@
 """
-Geosales - Total Units Sold by Country
+Geosales - Total units_sold by year for a given country and a given item type
 """
 
 # Library imports
@@ -19,14 +19,12 @@ class TotalUnitsSold(MRJob):
 
     # Mapper function
     def mapper_get_unitsSold(self, _, line):
-        (index, region, country, item_type, sales_channel, order_priority, order_date, order_id, 
-        ship_date, units_sold, unit_price, unit_cost, total_revenue, total_cost, total_profit) = line.split(",")
-
-        yield country, units_sold
-
+        geosales = line.split(",")
+        yield (geosales[2], geosales[3]), int(geosales[9])
+    
     # Reducer function
-    def reducer_sum_unitsSold(self, key, values):
-        yield str(sum(values)).zfill(5), key 
+    def reducer_sum_unitsSold(self, key, value):
+        yield key, sum(value)
 
 if __name__ == '__main__':
     TotalUnitsSold.run()
