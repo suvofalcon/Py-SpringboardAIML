@@ -7,7 +7,6 @@ python _01_RatingsBreakdown.py -r hadoop hdfs:///datasets/ml-100k/u.data --pytho
 python _01_GeoSales_TotalUnitsSold.py ../resources/geosales.csv --python-bin /home/suvo/opt/miniconda3/envs/pyspark/bin/python
 
 
-
 ### Trick
 
 Create ~/.mrjob.conf with this configuration:
