@@ -5,7 +5,6 @@ Geosales - Total units_sold by year for a given country and a given item type
 # Library imports
 from mrjob.job import MRJob
 from mrjob.step import MRStep
-from datetime import datetime
 
 # Define the main class which takes MRJob as an argument
 
@@ -24,8 +23,11 @@ class TotalUnitsSold(MRJob):
     A composite key will be defined
     '''
     def mapper_get_unitsSold(self, _, line):
+        # We will use the datetime library (only needed in mapper function)
+        from datetime import datetime
         geosales = line.split(",")
         country, item_type, units_sold = geosales[2], geosales[3], int(geosales[9])
+        # Extract the year from the order date column
         year = datetime.strptime(geosales[6], "%Y-%m-%d %H:%M:%S").year
         yield (year, country, item_type), units_sold
     
