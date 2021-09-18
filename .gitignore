@@ -10,10 +10,12 @@ _06_BigData/_07_Kafka/javaproject/target/classes/com/kafkaproject/Producer.class
 
 # Ignore .h5 files
 _10_TensorFlow2.0/*.h5
+_XX_Universal/*.h5
 _10_TensorFlow2.0/*.json
 
 # Ignore checkpoints
 _15_DrivenData/.ipynb_checkpoints/
+_XX_Universal/.ipynb_checkpoints/
 
 # Ignore some csvs
 _15_DrivenData/*.csv
