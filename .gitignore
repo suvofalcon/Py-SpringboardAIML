@@ -19,3 +19,5 @@ _XX_Universal/.ipynb_checkpoints/
 
 # Ignore some csvs
 _15_DrivenData/*.csv
+/.idea/modules.xml
+/.idea/Py-SpringboardDS.iml
