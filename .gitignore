@@ -12,6 +12,7 @@ _06_BigData/_07_Kafka/javaproject/target/classes/com/kafkaproject/Producer.class
 _10_TensorFlow2.0/*.h5
 _XX_Universal/*.h5
 _10_TensorFlow2.0/*.json
+_10_TensorFlow2.0/*.tsv
 
 # Ignore checkpoints
 _15_DrivenData/.ipynb_checkpoints/
