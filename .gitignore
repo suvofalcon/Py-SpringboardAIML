@@ -13,6 +13,7 @@ _10_TensorFlow2.0/*.h5
 _XX_Universal/*.h5
 _10_TensorFlow2.0/*.json
 _10_TensorFlow2.0/*.tsv
+_15_Tensorflow_GuidedProjects/*.h5
 
 # Ignore checkpoints
 _15_DrivenData/.ipynb_checkpoints/
