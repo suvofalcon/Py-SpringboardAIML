@@ -49,9 +49,10 @@ def classify_image(img_name):
     # Perform predictions with pre-trained model
     prediction = model.predict([image.reshape(1, 28*28)])
 
-    print(np.argmax(prediction[0]))
+    class_index = np.argmax(prediction[0])
+    print(f"Class Index Predicted - {class_index}")
     # return the prediction to the user
-    return jsonify({"object_identified": classes[np.argmax(prediction[0])]})
+    return jsonify({"object_identified": classes[class_index]})
 
 
 # Start the Flask application
