@@ -1,4 +1,4 @@
-'''
+"""
 # First we save some file from our mnist dataset to uploads folder
 from tensorflow.keras.datasets import fashion_mnist
 from matplotlib.pyplot import imsave
@@ -7,7 +7,7 @@ from matplotlib.pyplot import imsave
 print(X_test.shape)
 for index in range(5):
     imsave(fname="resources/uploads/{}.png".format(index), arr=X_test[index])
-'''
+"""
 
 
 # Import all project dependencies
