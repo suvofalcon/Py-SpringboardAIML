@@ -77,17 +77,6 @@ Various recommendation algorithms
 
 * A simple movie recommendations based on collaborative filtering
 
-## Big Data
-
-Various implementations within Big Data technologies
-
-### Map-Reduce Implementation Using Python
-### Apache Pig Scripts
-### Apache Hive Queries
-### Apache HBase
-### Apache Flume
-### Apache Kafka
-
 ## Deeep Learning 
 
 This has various implementations of neural networks
