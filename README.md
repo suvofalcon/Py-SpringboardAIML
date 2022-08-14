@@ -178,6 +178,18 @@ Detailed Samples on how to use Tensor Flow 2.0 (Latest release of TensorFlow. Mo
 * Building a RNN LSTM Network to predict stock prices
 * Building a Q&A Chatbot with Tensorflow by implementing LSTM (This is a WIP file)
 
+## Tensorflow 2.0 - Complete Guide Keras
+
+This project has source code from the Udemy Complete Course
+https://www.udemy.com/course/tensorflow-2/
+
+## Tensorflow 2.0 Practicals
+
+This project has source code from the Udemy Courses
+https://www.udemy.com/course/tensorflow-2-practical/
+https://www.udemy.com/course/tensorflow-2-practical-advanced/
+
+
 ## PySpark
 
 This has many implementations of how to use PySpark library on Apache Spark. The Spark version used is 2.4.5 on Hadoop 2.7.x
