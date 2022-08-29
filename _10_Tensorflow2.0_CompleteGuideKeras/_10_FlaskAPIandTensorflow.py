@@ -44,7 +44,8 @@ def classify_image(img_name):
     image = plt.imread(upload_dir + img_name)
     image.resize(28, 28)
     # Define the list of class names
-    classes = ["T-shirt/top", "Trouser", "Pullover", "Dress", "Coat", "Sandal", "Shirt", "Sneaker", "Bag", "Ankle boot"]
+    classes = ["T-shirt/top", "Trouser", "Pullover", "Dress",
+               "Coat", "Sandal", "Shirt", "Sneaker", "Bag", "Ankle boot"]
 
     # Perform predictions with pre-trained model
     prediction = model.predict([image.reshape(1, 28*28)])
@@ -58,4 +59,4 @@ def classify_image(img_name):
 # Start the Flask application
 app.run(port=5000, debug=False)
 
-#%%
+# %%
