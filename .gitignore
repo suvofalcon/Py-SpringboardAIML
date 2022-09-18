@@ -8,6 +8,8 @@
 _06_BigData/_07_Kafka/javaproject/target/classes/com/kafkaproject/*.class
 _06_BigData/_07_Kafka/javaproject/target/classes/com/kafkaproject/Producer.class
 
+_09_TensorFlow2.0/.ipynb_checkpoints/
+
 # Ignore .h5 files
 _10_TensorFlow2.0/*.h5
 _10_TensorFlow2.0_CompleteGuideKeras/*.h5
