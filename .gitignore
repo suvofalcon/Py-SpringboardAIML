@@ -23,13 +23,16 @@ _15_Tensorflow_GuidedProjects/*.h5
 # Ignore checkpoints
 _15_DrivenData/.ipynb_checkpoints/
 _XX_Universal/.ipynb_checkpoints/
+/_16_GenAI_Models/OPENAI-GPT/.ipynb_checkpoints/
+_16_GenAI_Models/OPENAI-GPT/.ipynb_checkpoints/_04_AutonomousCook-checkpoint.ipynb
 
-# Ignore some csvs
+# Ignore some miscelleneous files
 _15_DrivenData/*.csv
 /.idea/modules.xml
 /.idea/Py-SpringboardDS.iml
 /_14_PyTorch/__03_ANN/IrisDatasetModel.pt
-_16_GenAI_Models/OPENAI-GPT/.ipynb_checkpoints/_04_AutonomousCook-checkpoint.ipynb
+
 _16_GenAI_Models/OPENAI-GPT/recipe.png
 _16_GenAI_Models/OPENAI-GPT/blog.png
-/_16_GenAI_Models/OPENAI-GPT/.ipynb_checkpoints/
+_16_GenAI_Models/OPENAI-GPT/training_data.json
+
