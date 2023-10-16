@@ -38,3 +38,4 @@ _16_GenAI_Models/OPENAI-GPT/training_data.json
 
 /_16_GenAI_Models/OPENAI-GPT/training_data_prepared.jsonl
 /_16_GenAI_Models/OPENAI-GPT/unicorns_with_embeddings.csv
+/_16_GenAI_Models/LANGCHAIN/word_embeddings.csv
