@@ -39,3 +39,5 @@ _16_GenAI_Models/OPENAI-GPT/training_data.json
 /_16_GenAI_Models/OPENAI-GPT/training_data_prepared.jsonl
 /_16_GenAI_Models/OPENAI-GPT/unicorns_with_embeddings.csv
 /_16_GenAI_Models/LANGCHAIN/word_embeddings.csv
+_16_GenAI_Models/HuggingFace/CSVDataAnalysis/__pycache__/utils.cpython-311.pyc
+_16_GenAI_Models/HuggingFace/YT Video Script Writing Tool/__pycache__/utils.cpython-311.pyc
