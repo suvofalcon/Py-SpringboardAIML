@@ -45,3 +45,6 @@ _16_GenAI_Models/HuggingFace/SupportBotForWebsite/utils.py
 _16_GenAI_Models/HuggingFace/SupportBotForWebsite/__pycache__/constants.cpython-311.pyc
 _16_GenAI_Models/HuggingFace/SupportBotForWebsite/__pycache__/utils.cpython-311.pyc
 _16_GenAI_Models/HuggingFace/AutomaticTicketClassification/__pycache__/admin_utils.cpython-311.pyc
+_16_GenAI_Models/HuggingFace/AutomaticTicketClassification/modelsvm.pk1
+_16_GenAI_Models/HuggingFace/AutomaticTicketClassification/pages/__pycache__/admin_utils.cpython-311.pyc
+_16_GenAI_Models/HuggingFace/AutomaticTicketClassification/__pycache__/user_utils.cpython-311.pyc

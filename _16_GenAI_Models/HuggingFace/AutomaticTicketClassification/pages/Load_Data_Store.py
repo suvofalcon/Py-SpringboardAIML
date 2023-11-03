@@ -1,5 +1,5 @@
 import streamlit as st
-from admin_utils import *
+from pages.admin_utils import *
 
 
 def main():
